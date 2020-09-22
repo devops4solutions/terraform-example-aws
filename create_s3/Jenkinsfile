@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+     
+    stages {
+      stage('checkout') {
+          steps {
+                git url: 'https://github.com/devops4solutions/terraform-example-aws.git'
+             
+          }
+        }
+  stage('Set Terraform path') {
+            steps {
+                script {
+                    def tfHome = tool name: 'Terraform'
+                    env.PATH = "${tfHome}:${env.PATH}"
+                }
+                sh 'terraform --version'
+               
+               
+            }
+        }
+        
+         stage('Create S3 bucket') {
+             steps {
+             dir('create_s3')
+             {
+            
+                sh 'terraform init'
+                sh 'terraform plan -out=plan'
+                sh 'terraform apply plan'
+              
+             
+            }
+             }
+        }
+        
+      
+      
+    }
+}

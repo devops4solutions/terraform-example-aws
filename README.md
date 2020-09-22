@@ -1,2 +1,2 @@
-# terraform-example-aws
-This repository will store the code to create an infrastructure on AWS using terraform
+# terraform_network
+This repository is for all network components like vpc,subnets
