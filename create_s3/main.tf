@@ -16,7 +16,7 @@ resource "aws_s3_bucket" "terraform-state-storage-s3-devops4solutions" {
       prevent_destroy = true
     }
  
-    tags {
+    tags = {
       Name = "S3 Remote Terraform State Store for devops4solutions"
     }      
 }
@@ -35,7 +35,7 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock-devops4solutions" {
     type = "S"
   }
  
-  tags {
+  tags = {
     Name = "DynamoDB Terraform State Lock Table for devops4solutions"
   }
 }
