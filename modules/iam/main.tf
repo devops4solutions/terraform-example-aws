@@ -19,7 +19,7 @@ EOF
 }
 
 resource "aws_iam_role_policy" "vpcflowlog_policy" {
-  name = "vpcflowlog__policy"
+  name = "vpcflowlog_policy"
   role = "aws_iam_role.vpcflowlogsrole.id"
 
   policy = <<EOF
