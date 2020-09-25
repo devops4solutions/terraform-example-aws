@@ -58,7 +58,7 @@ resource "aws_route_table" "public_rt" {
 
 resource "aws_route_table" "private_rt" {
   vpc_id = var.vpc_id
-  tags {
+  tags = {
       Name = "Privat_RT"
   }
   route {
