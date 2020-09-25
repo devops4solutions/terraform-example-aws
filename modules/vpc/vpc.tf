@@ -5,5 +5,8 @@ enable_dns_support = true
     enable_dns_hostnames = true
  tags {
     Name = "terraform_vpc"
- }
+  }
 }
+output "vpc_id" { 
+  value = "${aws_vpc.terraform_vpc.id}" 
+} 
