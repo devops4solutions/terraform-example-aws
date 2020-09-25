@@ -12,7 +12,7 @@ source = "./modules/iam"
 module "vpc" {
 
 source = "./modules/vpc"
-vpc_id = "${module.iam.vpcflowlogsrole_arn}" 
+vpcflowlogsrole_arn = "${module.iam.vpcflowlogsrole_arn}" 
 }
 
 

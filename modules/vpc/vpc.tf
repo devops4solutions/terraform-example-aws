@@ -10,7 +10,7 @@ enable_dns_support = true
 }
 
 resource "aws_flow_log" "vpc_flow_log" {
-  log_group_name = aws_cloudwatch_log_group.vpc_cloudwatch_log_group.name
+  log_destination = aws_cloudwatch_log_group.vpc_cloudwatch_log_group.arn
  iam_role_arn   = var.vpcflowlogsrole_arn
   vpc_id         = aws_vpc.terraform_vpc.id
   traffic_type   = "ALL"
