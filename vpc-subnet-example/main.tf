@@ -9,8 +9,8 @@ source = "./modules/vpc"
 }
 
 
-module "subnets" {
-  source = "./modules/ec2"
+module "subnet" {
+  source = "./modules/subnets"
   vpc_id = "${module.vpc.vpc_id}"
 }
 
