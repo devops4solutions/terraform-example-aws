@@ -5,7 +5,7 @@ variable private_rt_id {}
 resource "aws_subnet" "PublicAZA" {
   vpc_id = var.vpc_id
   cidr_block = var.Subnet-Public-AzA-CIDR
-  tags {
+  tags = {
         Name = "PublicSubnetAZA"
   }
  
@@ -21,7 +21,7 @@ resource "aws_route_table_association" "PublicRouteTableAZA" {
 resource "aws_subnet" "PrivateAZA" {
   vpc_id = var.vpc_id
   cidr_block = var.Subnet-Private-AzA-CIDR
-  tags {
+  tags = {
         Name = "PrivateSubnetAZB"
   }
 }
