@@ -41,7 +41,7 @@ resource "aws_eip" "eip_forNat" {
 resource "aws_nat_gateway" "NatGateway" {
     allocation_id = aws_eip.eip_forNat.id
     subnet_id = var.public_subnet_id
-    depends_on = aws_internet_gateway.gw
+    depends_on = [aws_internet_gateway.gw]
 }
 
 resource "aws_route_table" "public_rt" {
