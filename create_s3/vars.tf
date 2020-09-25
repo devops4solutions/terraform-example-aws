@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "bucket_devops4solutions"{
-  default="terraform-remote-state-devops4solutions-s3"
+  default="terraform-remote-state-devopssolutions-bucket"
   
 }
 
