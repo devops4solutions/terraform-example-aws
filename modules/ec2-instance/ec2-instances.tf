@@ -15,7 +15,7 @@ resource "aws_instance" "webserver" {
   ami           = var.ami
  connection {
     user = "ec2-user"
-    host = "aws_instance.webserver.public_ip
+    host = aws_instance.webserver.public_ip
   }
 
   instance_type = "t2.micro"
