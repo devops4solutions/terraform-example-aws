@@ -1,8 +1,5 @@
-
-
-
-
-resource "aws_network_acl" "nacl_public" {
+resource "aws_network_acl" "nacl_public" 
+{
    vpc_id = var.vpc_id
     subnet_ids = [var.public_subnet_id]
 

@@ -7,7 +7,7 @@ variable "ami" {
 }
 
 variable "key_name" {
-  default = "ansible_aut.pem"
+  default = "test"
   description = "the ssh key to use in the EC2 machines"
 }
 variable "public_key_path" {
