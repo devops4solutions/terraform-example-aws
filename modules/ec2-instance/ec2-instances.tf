@@ -14,11 +14,8 @@ resource "aws_key_pair" "auth" {
 resource "aws_instance" "webserver" {
   ami           = var.ami
  connection {
-    # The default username for our AMI
     user = "ec2-user"
     host = "aws_instance.webserver.public_ip
-
-    # The connection will use the local SSH agent for authentication.
   }
 
   instance_type = "t2.micro"
