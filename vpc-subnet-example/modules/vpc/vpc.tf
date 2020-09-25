@@ -3,7 +3,7 @@ resource "aws_vpc" "terraform_vpc" {
  #### this 2 true values are for use the internal vpc dns resolution
 enable_dns_support = true
     enable_dns_hostnames = true
- tags {
+ tags = {
     Name = "terraform_vpc"
  }
 }
