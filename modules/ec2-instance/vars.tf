@@ -1,15 +1,13 @@
 variable "region" {
-  default = "us-west-2"
+  default = "us-east-2"
 }
+
 variable "ami" {
-type = "map"
-  default =
-{
-us-west-2= "ami-223f945a"
+  default="ami-03657b56516ab7912"
 }
-}
+
 variable "key_name" {
-  default = "EC2_Key"
+  default = "ansible_aut.pem"
   description = "the ssh key to use in the EC2 machines"
 }
 variable "public_key_path" {
