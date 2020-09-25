@@ -12,9 +12,9 @@ resource "aws_s3_bucket" "terraform-state-storage-s3-devops4solutions" {
       enabled = true
     }
  
-    lifecycle {
-      prevent_destroy = true
-    }
+  #  lifecycle {
+   #   prevent_destroy = true
+  #  }
  
     tags = {
       Name = "S3 Remote Terraform State Store for devops4solutions"
