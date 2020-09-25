@@ -1,3 +1,4 @@
+variable vpcflowlogsrole_arn {}
 resource "aws_vpc" "terraform_vpc" { 
   cidr_block = var.vpc-fullcidr
  #### this 2 true values are for use the internal vpc dns resolution
