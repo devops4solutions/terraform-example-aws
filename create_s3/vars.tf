@@ -1,8 +1,9 @@
 variable "region" {
-  default = "us-east-1"
+  default = "us-east-2"
 }
+
 variable "bucket_devops4solutions"{
-  default="terraform-remote-state-devops4solutions-s3fdfdfdfdfd"
+  default="terraform-remote-state-devops4solutions-s3"
   
 }
 

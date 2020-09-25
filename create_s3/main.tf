@@ -1,12 +1,12 @@
 provider "aws" {
-region = "${var.region}"
+region = var.region
 }
 
 # terraform state file setup
 # create an S3 bucket for vpc to store the state file in
 
 resource "aws_s3_bucket" "terraform-state-storage-s3-devops4solutions" {
-   bucket = "${var.bucket_devops4solutions}"
+   bucket = "var.bucket_devops4solutions"
  
     versioning {
       enabled = true
