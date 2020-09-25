@@ -104,7 +104,7 @@ ingress {
   }
 
 
-   tags {
+   tags = {
         Name = "nacl_public"
     }
 }
