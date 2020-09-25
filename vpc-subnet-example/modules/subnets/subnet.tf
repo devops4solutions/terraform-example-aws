@@ -1,4 +1,4 @@
-#variable vpc_id {}
+variable vpc_id {}
 
 resource "aws_subnet" "PublicAZA" {
   vpc_id = var.vpc_id
